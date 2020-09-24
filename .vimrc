@@ -8,6 +8,14 @@ Plugin 'wincent/command-t'
 Plugin 'bling/vim-bufferline'
 Plugin 'tpope/vim-surround'
 Plugin 'preservim/nerdcommenter'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+
+
+"ultisnips parametres 
+let g:UltiSnipsExpandTrigger="<C-f>"
+let g:UltiSnipsJumpForwardTrigger="<C-i>"
+let g:UltiSnipsJumpBackwardTrigger="<C-u>"
 
 call vundle#end()
 
