@@ -10,6 +10,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'preservim/nerdcommenter'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+call vundle#end()
 
 
 "ultisnips parametres 
@@ -17,7 +18,15 @@ let g:UltiSnipsExpandTrigger="<C-f>"
 let g:UltiSnipsJumpForwardTrigger="<C-i>"
 let g:UltiSnipsJumpBackwardTrigger="<C-u>"
 
-call vundle#end()
+"takes care of brackets 
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+
 
 filetype plugin indent on
 
@@ -32,8 +41,7 @@ set ruler
 set laststatus=2
 
 set colorcolumn=110
-highlight ColorColumn ctermbg=darkgray
-
+highlight ColorColumn ctermbg=darkgrey
 syntax on 
 
 
