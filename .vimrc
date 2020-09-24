@@ -23,6 +23,9 @@ set autoindent
 set ruler
 set laststatus=2
 
+set colorcolumn=110
+highlight ColorColumn ctermbg=darkgray
+
 syntax on 
 
 
