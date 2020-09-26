@@ -138,3 +138,9 @@ ex ()
   fi
 }
 set -oi vi
+alias la="ls -la"
+alias ll="ls -l"
+alias vim="nvim"
+search(){
+	ls -la |grep $1
+}
