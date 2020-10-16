@@ -39,7 +39,7 @@ case ${TERM} in
 		PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
 		;;
 	screen*)
-		PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
+		PROMPT_COMMAND='echo -ne "[\033_${USER}]:${PWD/#$HOME/\~}\033\\"'
 		;;
 esac
 
@@ -141,6 +141,25 @@ set -oi vi
 alias la="ls -la"
 alias ll="ls -l"
 alias vim="nvim"
-search(){
-	ls -la |grep $1
+alias cl="clear"
+alias q="exit"
+export EDITOR='nvim'
+
+go(){
+   cd $1
+   ls 
 }
+
+
+search(){
+	ls -la $2 |grep $1
+}
+
+function _update_ps1() {
+    PS1=$(powerline-shell $?)
+}
+
+if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
+

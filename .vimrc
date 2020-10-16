@@ -10,6 +10,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'preservim/nerdcommenter'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'puremourning/vimspector'
 call vundle#end()
 
 
