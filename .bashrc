@@ -144,6 +144,7 @@ alias vim="nvim"
 alias cl="clear"
 alias q="exit"
 export EDITOR='nvim'
+export BROWSER='qutebrowser'
 
 go(){
    cd $1
