@@ -11,3 +11,5 @@ zstyle ':completion:*' '' matcher-list 'm:{a-z}={A-Z}'
 
 alias la='ls -la'
 alias ll='ls -l'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
